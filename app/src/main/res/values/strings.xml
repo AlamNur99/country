@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">country</string>
+    <string name="country_name">Nama Negara</string>
+    <string name="capital">Ibu kota</string>
+</resources>
