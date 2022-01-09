@@ -1,6 +1,7 @@
 package com.alam.country
 
 import android.view.LayoutInflater
+import android.view.ScrollCaptureCallback
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -10,6 +11,12 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class ListCountryAdapter(private val listCountry: ArrayList<Country>): RecyclerView.Adapter<ListCountryAdapter.ListViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvCapital: TextView = itemView.findViewById(R.id.tv_item_capital)
@@ -30,10 +37,18 @@ class ListCountryAdapter(private val listCountry: ArrayList<Country>): RecyclerV
 
         holder.tvName.text = country.name
         holder.tvCapital.text = country.capital
+
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listCountry[holder.adapterPosition])
+        }
     }
 
     override fun getItemCount(): Int {
         return listCountry.size
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Country)
     }
 
 }

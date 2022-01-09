@@ -2,4 +2,12 @@
     <string name="app_name">country</string>
     <string name="country_name">Nama Negara</string>
     <string name="capital">Ibu kota</string>
+    <string name="ibu_kota">Ibu Kota</string>
+    <string name="pemimpin">Pemimpin</string>
+    <string name="bahasa_nasional">Bahasa Nasional</string>
+    <string name="luas_wilayah">Luas Wilayah</string>
+    <string name="mata_uang">Mata Uang</string>
+    <string name="about">About</string>
+    <string name="muhammad_alam_nur_haris">Muhammad Alam Nur Haris</string>
+    <string name="muh_alamnur_haris99_gmail_com">muh.alamnur.haris99@gmail.com</string>
 </resources>
