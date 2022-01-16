@@ -1,3 +1,2 @@
 # country
-
-for submission
+Cuma buat latihan
